@@ -56,6 +56,24 @@ main {
 			font: 60px/301px 'orbitron';
 			color: #fff;
 			text-align: center;
+
+			em {
+				position: absolute;
+				top: 90px;
+				left: 80px;
+				font: 20px/1 'orbitron';
+				color: #fff;
+				opacity: 0;
+
+				&.on {
+					opacity: 0.8;
+				}
+			}
+
+			span {
+				display: inline-block;
+				width: 100px;
+			}
 		}
 	}
 }

@@ -67,5 +67,20 @@ main figure .screen {
   color: #fff;
   text-align: center;
 }
+main figure .screen em {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  font: 20px/1 "orbitron";
+  color: #fff;
+  opacity: 0;
+}
+main figure .screen em.on {
+  opacity: 0.8;
+}
+main figure .screen span {
+  display: inline-block;
+  width: 100px;
+}
 
 /*# sourceMappingURL=style.css.map */

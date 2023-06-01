@@ -1,4 +1,6 @@
 const numbers = document.querySelectorAll('.screen span');
+const [am, pm] = document.querySelectorAll('.screen em');
+// console.log([am, pm]);
 
 setInterval(() => {
 	const times = getTime();
@@ -11,6 +13,13 @@ function getTime() {
 	let min = now.getMinutes();
 	let sec = now.getSeconds();
 
+	if (hr > 12) {
+		am.classList.remove('on');
+		pm.classList.add('on');
+	} else {
+		am.classList.add('on');
+		pm.classList.remove('on');
+	}
 	return [hr, min, sec];
 }
 
