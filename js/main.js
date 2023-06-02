@@ -11,8 +11,8 @@ setInterval(() => {
 function changeTheme() {
 	const hr = new Date().getHours();
 	const data = [
-		{ cond: hr >= 5 && hr < 11, name: 'morning' },
-		{ cond: hr >= 11 && hr < 16, name: 'afternoon' },
+		{ cond: hr >= 5 && hr < 12, name: 'morning' },
+		{ cond: hr >= 12 && hr < 16, name: 'afternoon' },
 		{ cond: hr >= 16 && hr < 19, name: 'evening' },
 		{ cond: hr >= 19 || hr < 5, name: 'night' },
 	];
@@ -25,8 +25,7 @@ function changeTheme() {
 	});
 
 	// if (main.classList.contains('afternoon')) main.classList.add('dark');
-	// else main.classList.remove('dark');
-
+	// else main.classList.remove('dark'); 아래 삼항연산자로 바꿈
 	main.classList.contains('afternoon') ? main.classList.add('dark') : main.classList.remove('dark');
 }
 
