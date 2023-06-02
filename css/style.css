@@ -25,6 +25,12 @@ main {
   background-size: cover;
   background-image: url(../img/bg_morning.jpg);
 }
+main.dark article p,
+main.dark article em,
+main.dark figure .screen,
+main.dark figure .screen > em {
+  color: #555;
+}
 main.morning {
   background-image: url(../img/bg_morning.jpg);
 }
