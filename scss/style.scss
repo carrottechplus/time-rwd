@@ -1,5 +1,6 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+$names: (morning, afternoon, evening, night);
 
 main {
 	overflow: hidden;
@@ -22,31 +23,12 @@ main {
 		}
 	}
 
-	&.morning {
-		background-image: url(../img/bg_morning.jpg);
-		figure {
-			background-image: url('../img/phone_morning.png');
-		}
-	}
-
-	&.afternoon {
-		background-image: url(../img/bg_afternoon.jpg);
-		figure {
-			background-image: url('../img/phone_afternoon.png');
-		}
-	}
-
-	&.evening {
-		background-image: url(../img/bg_evening.jpg);
-		figure {
-			background-image: url('../img/phone_evening.png');
-		}
-	}
-
-	&.night {
-		background-image: url(../img/bg_night.jpg);
-		figure {
-			background-image: url('../img/phone_night.png');
+	@each $name in $names {
+		&.#{$name} {
+			background-image: url(../img/bg_#{$name}.jpg);
+			figure {
+				background-image: url('../img/phone_#{$name}.png');
+			}
 		}
 	}
 
@@ -56,7 +38,7 @@ main {
 		left: 0%;
 		opacity: 0;
 
-		animation: move 30s linear 15s infinite;
+		animation: move 40s linear 20s infinite;
 	}
 
 	.cl2 {
@@ -64,7 +46,7 @@ main {
 		top: -50px;
 		left: 0%;
 		opacity: 0;
-		animation: move 30s linear 0s infinite;
+		animation: move 40s linear 0s infinite;
 	}
 
 	@keyframes move {
@@ -119,6 +101,7 @@ main {
 		background-size: contain;
 
 		.screen {
+			overflow: hidden;
 			width: 532px;
 			height: 301px;
 			position: absolute;
@@ -128,6 +111,24 @@ main {
 			font: 60px/301px 'orbitron';
 			color: #fff;
 			text-align: center;
+
+			.cl1 {
+				width: 600px;
+				position: absolute;
+				top: 30px;
+				left: 0;
+				opacity: 0;
+				animation: move 40s linear 20s infinite;
+			}
+
+			.cl2 {
+				width: 700px;
+				position: absolute;
+				top: 20px;
+				left: 0;
+				opacity: 0;
+				animation: move 40s linear 0s infinite;
+			}
 
 			em {
 				position: absolute;

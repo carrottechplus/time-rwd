@@ -60,14 +60,14 @@ main .cl1 {
   top: -100px;
   left: 0%;
   opacity: 0;
-  animation: move 30s linear 15s infinite;
+  animation: move 40s linear 20s infinite;
 }
 main .cl2 {
   position: absolute;
   top: -50px;
   left: 0%;
   opacity: 0;
-  animation: move 30s linear 0s infinite;
+  animation: move 40s linear 0s infinite;
 }
 @keyframes move {
   0% {
@@ -117,6 +117,7 @@ main figure {
   background-size: contain;
 }
 main figure .screen {
+  overflow: hidden;
   width: 532px;
   height: 301px;
   position: absolute;
@@ -125,6 +126,22 @@ main figure .screen {
   font: 60px/301px "orbitron";
   color: #fff;
   text-align: center;
+}
+main figure .screen .cl1 {
+  width: 600px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  opacity: 0;
+  animation: move 40s linear 20s infinite;
+}
+main figure .screen .cl2 {
+  width: 700px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  opacity: 0;
+  animation: move 40s linear 0s infinite;
 }
 main figure .screen em {
   position: absolute;
